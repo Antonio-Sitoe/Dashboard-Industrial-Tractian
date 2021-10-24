@@ -9,6 +9,7 @@ import Company from '../Company/Company';
 import Units from '../Units/Units';
 import { Content } from './Style';
 import useMedia from '../../Hooks/useMedia';
+import Header from '../Header/Header';
 
 function Dashboard() {
   const mobile = useMedia('(max-width:40rem)');
@@ -25,7 +26,7 @@ function Dashboard() {
     <Container mobile={ShowPanel ? '1fr' : '17rem 1fr'}>
       <Panel ShowPanel={ShowPanel} />
       <Content>
-        <button onClick={() => setShowPanel(!ShowPanel)}>sate</button>
+        <Header ShowPanel={ShowPanel} setShowPanel={setShowPanel} />
         <Routes>
           <Route path='' element={<Home />} />
           <Route path='assets' element={<Assets />} />

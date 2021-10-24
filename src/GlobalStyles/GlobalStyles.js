@@ -1,9 +1,12 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { backgroundColor, colorWhite, colorWhiteHover } from './Utilits';
+import {
+  backgroundColor,
+  colorWhite,
+  colorWhiteHover,
+  dashbordbgColor,
+} from './Utilits';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@400;600;700&family=Zen+Kaku+Gothic+Antique&display=swap');
-
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a, button, input{
   margin: 0;
   padding:0;
@@ -35,6 +38,7 @@ h2 {
 }
 p {
   font-size: 0.87rem;
+  color: ${colorWhiteHover};
 }
 
 svg {
@@ -55,6 +59,7 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: ${(props) => props.mobile};
   gap: 1rem;
+  background: ${backgroundColor};
 `;
 
 export const AnimeLeft = keyframes`
@@ -68,4 +73,28 @@ export const AnimeLeft = keyframes`
     opacity:1;
     transform:translateX(0)
   }
+`;
+
+export const Button = styled.button`
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  background: ${dashbordbgColor};
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+`;
+
+const Rotate = keyframes`
+  to {
+    transform: rotate(360deg)
+  }
+`;
+export const Spinner = styled.div`
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: 1s ${Rotate} infinite;
 `;

@@ -8,7 +8,7 @@ import {
 export const Painel = styled.section`
   padding: 0.6rem;
   height: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: ${(props) => props.display};
   @media (max-width: 800px) {
     padding: 0;
@@ -16,7 +16,9 @@ export const Painel = styled.section`
 `;
 export const Dash = styled.div`
   position: fixed;
-  top: 8rem;
+  top: 4rem;
+  height: 80%;
+  left: 1.5rem;
   background: ${dashbordbgColor};
   border-radius: 0.3rem;
   width: 14rem;
@@ -70,5 +72,5 @@ export const Ul = styled.ul`
 `;
 
 export const Content = styled.div`
-  padding: 1rem ;
+  padding: 1rem;
 `;

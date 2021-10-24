@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Points3() {
+function Points3({ ...rest }) {
   return (
     <svg
+      {...rest}
       width='24'
       height='24'
       viewBox='0 0 24 24'

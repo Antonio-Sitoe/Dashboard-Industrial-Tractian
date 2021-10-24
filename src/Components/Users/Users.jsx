@@ -1,12 +1,15 @@
-import react from 'react';
 import React from 'react';
+import { UserContext } from '../../Context/UserContext';
 import useFetch from '../../Hooks/useFetch';
-import Points3 from '../../Images/Points3';
 import { GET_UNIT, GET_USERS } from '../../Services/Api';
-import { Card, Table, Theader, UserList, Tbody, SectionUser } from './style';
+import Loading from '../Helper/Loading';
+import Modal from '../Modal/Modal';
+import LastTd from './LastTd';
+import { Card, Table, Theader, Title, Tbody, SectionUser } from './style';
 
 function Users() {
-  const { loading, error, request } = useFetch();
+  const { dataModal } = React.useContext(UserContext);
+  const { error, request, loading } = useFetch();
   const [users, setUsers] = React.useState(null);
 
   React.useEffect(() => {
@@ -33,38 +36,47 @@ function Users() {
     FetchUsers();
   }, []);
 
+  if (error)
+    return (
+      <div>
+        <p>{error}</p>
+      </div>
+    );
   return (
-    <SectionUser>
-      {users && (
-        <Card>
-          <UserList>Users List</UserList>
-          <Table>
-            <Theader>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Units</th>
-                <th>Action</th>
-              </tr>
-            </Theader>
-            <Tbody>
-              {users.map(({ id, email, name, unitId }) => {
-                return (
-                  <tr key={id}>
-                    <td>{name}</td>
-                    <td>{email}</td>
-                    <td>{unitId}</td>
-                    <td>
-                      <Points3 />
-                    </td>
-                  </tr>
-                );
-              })}
-            </Tbody>
-          </Table>
-        </Card>
+    <>
+      {users ? (
+        <SectionUser>
+          <Card>
+            <Title>Users List</Title>
+            <Table>
+              <Theader>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Units</th>
+                  <th>Action</th>
+                </tr>
+              </Theader>
+              <Tbody>
+                {users.map(({ id, email, name, unitId }) => {
+                  return (
+                    <tr key={id}>
+                      <td>{name}</td>
+                      <td>{email}</td>
+                      <td>{unitId}</td>
+                      <LastTd id={id} />
+                    </tr>
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </Card>
+          <Modal dataModal={dataModal} users={users} error={error} loading={loading} />
+        </SectionUser>
+      ) : (
+        <Loading></Loading>
       )}
-    </SectionUser>
+    </>
   );
 }
 
