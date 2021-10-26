@@ -19,4 +19,5 @@ export const MainUnits = styled.main`
   }
 `;
 
-export const Graphs = styled.div``;
+export const Graphs = styled.div`
+`;

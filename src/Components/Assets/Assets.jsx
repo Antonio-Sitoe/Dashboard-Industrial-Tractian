@@ -1,239 +1,111 @@
 import React from 'react';
 import { SectionUser } from '../Users/style';
+import useFetch from '../../Hooks/useFetch';
+import { Links } from '../../GlobalStyles/GlobalStyles';
 import {
   AssetsContainer,
   CardAssets,
   CenterButton,
   List,
   Name,
+  Span,
 } from './AssetsStyle';
-
-import imgBg from '../../Images/big.png';
-import { Button } from '../../GlobalStyles/GlobalStyles';
+import { GET_ASSETS } from '../../Services/Api';
+import Loading from '../Helper/Loading';
+import Image from '../Image/Image';
 
 function Assets() {
-  return (
-    <SectionUser>
-      <AssetsContainer>
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
+  const { data, error, request, loading } = useFetch();
+  const CleanElements = (element, unit = ' ') => {
+    return element && unit ? `${element} ${unit}` : '--';
+  };
+  const CleanStatus = (status) => {
+    let color;
+    switch (status) {
+      case 'inAlert':
+        color = '#DB303F';
+        break;
+      case 'inOperation':
+        color = '#45C86D';
+        break;
+      default:
+        color = '#DB8C28';
+        break;
+    }
+    return <Span color={color}>{status}</Span>;
+  };
 
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
+  React.useEffect(() => {
+    async function FetchAssets() {
+      const { url, options } = GET_ASSETS();
+      await request(url, options);
+    }
+    let isAmounted = true;
+    if (isAmounted) FetchAssets();
+    return () => (isAmounted = false);
+  }, []);
 
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
-
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
-
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
-
-        <CardAssets>
-          <Name>Motor: H13D-1</Name>
-          <img src={imgBg} alt='s' />
-          <div>
-            <List>
-              <li>
-                <strong>Sensor: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Temperatura: </strong>
-                40%
-              </li>
-              <li>
-                <strong>Rotacao: </strong>
-                40 km/hora
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Potencia: </strong>
-                GSJ1535ii
-              </li>
-              <li>
-                <strong>Eixos: </strong>
-                X.Radial Y.Axial
-              </li>
-            </List>
-            <CenterButton>
-              <Button>Informacao</Button>
-            </CenterButton>
-          </div>
-        </CardAssets>
-        
-      </AssetsContainer>
-    </SectionUser>
-  );
+  if (error)
+    return (
+      <div>
+        <p>{error}</p>
+      </div>
+    );
+  if (data)
+    return (
+      <SectionUser>
+        <AssetsContainer>
+          {data.map(
+            ({
+              id,
+              sensors,
+              name,
+              image,
+              specifications,
+              healthscore,
+              status,
+            }) => {
+              return (
+                <CardAssets key={id}>
+                  <Name>{name}</Name>
+                  <Image src={image} alt='Photos' height='18rem' />
+                  <div>
+                    <List>
+                      <li>
+                        <strong>Sensors: </strong>
+                        {CleanElements(sensors[0])}
+                      </li>
+                      <li>
+                        <strong>Temperature: </strong>
+                        {CleanElements(specifications.maxTemp, 'ºC')}
+                      </li>
+                      <li>
+                        <strong>Status: </strong>
+                        {CleanStatus(status)}
+                      </li>
+                      <li>
+                        <strong>Healthscore: </strong>
+                        {CleanElements(healthscore, '%')}
+                      </li>
+                      <li>
+                        <strong>Power: </strong>
+                        {CleanElements(specifications.power, 'kWh')}
+                      </li>
+                    </List>
+                    <CenterButton>
+                      <Links to={`${id}`}>Informacao</Links>
+                    </CenterButton>
+                  </div>
+                </CardAssets>
+              );
+            }
+          )}
+        </AssetsContainer>
+      </SectionUser>
+    );
+  else {
+    return loading && <Loading></Loading>;
+  }
 }
 
 export default Assets;

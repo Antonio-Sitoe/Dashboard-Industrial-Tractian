@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dash, Painel, LogoDiv, Ul } from './Style';
 import Logo from '../../Images/Logo';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import HomeIcon from '../../Images/HomeIcon';
 import AssetsIcons from '../../Images/AssetsIcons';
 import UserIcon from '../../Images/UserIcon';
@@ -17,35 +17,34 @@ function Panel({ ShowPanel }) {
         <nav>
           <Ul>
             <li>
-              <Link to=''>
+              <NavLink to='' end>
                 <HomeIcon />
                 <span>Home</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='assets'>
+              <NavLink to='assets'>
                 <AssetsIcons />
                 <span>Assets</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='users'>
+              <NavLink to='users'>
                 <UserIcon />
                 <span>Users</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='units'>
+              <NavLink to='units'>
                 <Unit />
                 <span>Units</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='company'>
+              <NavLink to='company'>
                 <CompanyIcons />
-
                 <span>Company</span>
-              </Link>
+              </NavLink>
             </li>
           </Ul>
         </nav>

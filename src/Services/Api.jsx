@@ -1,5 +1,6 @@
 const URL_BASE = 'https://my-json-server.typicode.com/tractian/fake-api';
 
+// USERS
 export function GET_USERS() {
   return {
     url: `${URL_BASE}/users`,
@@ -8,6 +9,7 @@ export function GET_USERS() {
     },
   };
 }
+
 export function GET_USER(id) {
   return {
     url: `${URL_BASE}/users/${id}`,
@@ -16,16 +18,7 @@ export function GET_USER(id) {
     },
   };
 }
-export function GET_UNIT(id) {
-  const dados = {
-    url: `${URL_BASE}/units/${id}`,
-    options: {
-      method: 'GET',
-    },
-  };
 
-  return fetch(dados.url, dados.options);
-}
 export function POST_USERS(body) {
   return {
     url: `${URL_BASE}/users`,
@@ -39,9 +32,10 @@ export function POST_USERS(body) {
   };
 }
 
-export function GET_COMPANY() {
+//ASSETS
+export function GET_ASSETS() {
   return {
-    url: `${URL_BASE}/companies/1`,
+    url: `${URL_BASE}/assets`,
     options: {
       method: 'GET',
     },
@@ -56,9 +50,31 @@ export function GET_ASSET() {
   };
 }
 
+//UNIT
+export function GET_UNIT(id) {
+  const dados = {
+    url: `${URL_BASE}/units/${id}`,
+    options: {
+      method: 'GET',
+    },
+  };
+
+  return fetch(dados.url, dados.options);
+}
+
 export function GET_UNITS() {
   return {
     url: `${URL_BASE}/units`,
+    options: {
+      method: 'GET',
+    },
+  };
+}
+
+//COMPANY
+export function GET_COMPANY() {
+  return {
+    url: `${URL_BASE}/companies/1`,
     options: {
       method: 'GET',
     },

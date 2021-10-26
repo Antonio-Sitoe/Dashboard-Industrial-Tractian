@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { bgCard, colorGreen, colorWhite } from '../../GlobalStyles/Utilits';
 export const AssetsContainer = styled.div`
-  /* border: 1px solid red; */
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -22,19 +21,6 @@ export const CardAssets = styled.div`
 
   @media (max-width: 40rem) {
     grid-template-columns: 1fr;
-  }
-
-  img {
-    border-radius: 0.3rem;
-    display: block;
-    height: 20rem;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    @media (max-width: 40rem) {
-      max-width: 100%;
-      height: 18rem;
-    }
   }
 `;
 export const Name = styled.span`
@@ -68,7 +54,23 @@ export const CenterButton = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-   @media (max-width: 40rem) {
+  @media (max-width: 40rem) {
     margin-bottom: 1rem;
+  }
+`;
+
+export const Span = styled.span`
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    display: block;
+    background: ${(props) => props.color};
+    border: none;
   }
 `;

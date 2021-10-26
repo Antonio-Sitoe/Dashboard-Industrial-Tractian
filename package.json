@@ -7,8 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@mui/icons-material": "^5.0.4",
     "components": "^0.1.0",
+    "highcharts": "^9.3.0",
+    "highcharts-react-official": "^3.1.0",
     "history": "^5.0.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { AnimeLeft } from '../../GlobalStyles/GlobalStyles';
 import {
-  backgroundColor,
   bgCard,
   colorWhite,
 } from '../../GlobalStyles/Utilits';
 
 export const SectionUser = styled.section`
   animation: ${AnimeLeft} 0.3s;
+  margin-top: 1rem;
 `;
 
 export const Card = styled.div`
@@ -37,16 +37,13 @@ export const Table = styled.table`
 `;
 
 export const Theader = styled.thead`
-  text-align: left;
+  text-align: center;
 
   tr {
     th {
       border-bottom: 1px solid ${colorWhite};
       padding-bottom: 1rem;
-
-      &:last-child {
-        text-align: center;
-      }
+      text-align: center;
     }
   }
 `;
@@ -55,18 +52,7 @@ export const Tbody = styled.tbody`
   td {
     border-bottom: 1px solid ${colorWhite};
     padding: 1rem 0;
-
-    &:last-child {
-      text-align: center;
-
-      svg {
-        width: 2rem;
-        border-radius: 0.3rem;
-        &:hover {
-          background: ${backgroundColor};
-        }
-      }
-    }
+    text-align: center;
   }
 `;
 

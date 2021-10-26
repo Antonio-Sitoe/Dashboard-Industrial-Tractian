@@ -1,14 +1,13 @@
 import React from 'react';
-import { UserContext } from '../../Context/UserContext';
+import { Button } from '../../GlobalStyles/GlobalStyles';
+
 import useFetch from '../../Hooks/useFetch';
 import { GET_UNIT, GET_USERS } from '../../Services/Api';
 import Loading from '../Helper/Loading';
 import Modal from '../Modal/Modal';
-import LastTd from './LastTd';
 import { Card, Table, Theader, Title, Tbody, SectionUser } from './style';
 
 function Users() {
-  const { dataModal } = React.useContext(UserContext);
   const { error, request, loading } = useFetch();
   const [users, setUsers] = React.useState(null);
 
@@ -22,9 +21,7 @@ function Users() {
         });
 
         const allPromise = await Promise.all(unit);
-        const CleanPromise = await allPromise.map((response) =>
-          response.json()
-        );
+        const CleanPromise = allPromise.map((response) => response.json());
         const dataFetching = await Promise.all(CleanPromise);
         const reducer = json.map((item, index) => {
           item.unitId = dataFetching[index].name;
@@ -33,7 +30,9 @@ function Users() {
         setUsers(reducer);
       }
     }
-    FetchUsers();
+    let isAmounted = true;
+    if (isAmounted) FetchUsers();
+    return () => (isAmounted = false);
   }, []);
 
   if (error)
@@ -54,7 +53,6 @@ function Users() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Units</th>
-                  <th>Action</th>
                 </tr>
               </Theader>
               <Tbody>
@@ -64,14 +62,13 @@ function Users() {
                       <td>{name}</td>
                       <td>{email}</td>
                       <td>{unitId}</td>
-                      <LastTd id={id} />
                     </tr>
                   );
                 })}
               </Tbody>
             </Table>
           </Card>
-          <Modal dataModal={dataModal} users={users} error={error} loading={loading} />
+          <Button onClick={() => setOpenModal(true)}>Add User</Button>
         </SectionUser>
       ) : (
         <Loading></Loading>

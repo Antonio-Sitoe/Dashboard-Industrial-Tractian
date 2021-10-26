@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AnimeLeft } from '../../GlobalStyles/GlobalStyles';
 import {
   colorWhite,
   colorWhiteHover,
@@ -8,10 +9,13 @@ import {
 export const Painel = styled.section`
   padding: 0.6rem;
   height: 100%;
-  /* border: 1px solid red; */
   display: ${(props) => props.display};
+
   @media (max-width: 800px) {
     padding: 0;
+    position: fixed;
+    transition: 0.6s;
+    z-index: 100;
   }
 `;
 export const Dash = styled.div`
@@ -23,16 +27,7 @@ export const Dash = styled.div`
   border-radius: 0.3rem;
   width: 14rem;
   padding: 1rem;
-
-  @media (max-width: 800px) {
-    position: initial;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-radius: 0;
-    transition: 0.5s;
-    width: 17rem;
-  }
+  animation: ${AnimeLeft} 0.3s;
 `;
 
 export const LogoDiv = styled.div`

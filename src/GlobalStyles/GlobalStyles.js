@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import {
   backgroundColor,
@@ -16,6 +17,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, li, a, button, input{
 }
 body {
  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+ background: ${backgroundColor};
 
 }
 img {
@@ -55,20 +57,20 @@ svg {
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-
   display: grid;
   grid-template-columns: ${(props) => props.mobile};
   gap: 1rem;
   background: ${backgroundColor};
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const AnimeLeft = keyframes`
-  
   from {
     opacity:0;
     transform:translateX(-30px)
   }
-  
   to {
     opacity:1;
     transform:translateX(0)
@@ -83,6 +85,17 @@ export const Button = styled.button`
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;
+`;
+
+export const Links = styled(Link)`
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  background: ${dashbordbgColor};
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 0.8rem;
 `;
 
 const Rotate = keyframes`

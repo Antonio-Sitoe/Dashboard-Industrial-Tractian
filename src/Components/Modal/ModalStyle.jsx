@@ -21,7 +21,7 @@ export const ModalBg = styled.div`
   padding: 0.3rem;
 `;
 
-export const ModalContent = styled.div`
+export const ModalContent = styled.form`
   max-width: 30rem;
   width: 100%;
   padding: 2rem 1rem;

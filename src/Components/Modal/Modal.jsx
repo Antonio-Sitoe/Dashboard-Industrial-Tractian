@@ -3,40 +3,45 @@ import { Button } from '../../GlobalStyles/GlobalStyles';
 import Input from '../Forms/Input';
 import { Title } from '../Users/style';
 import { ModalBg, ModalContent, CLose } from './ModalStyle';
+import { UserContext } from '../../Context/UserContext';
 
-function Modal({ dataModal, users }) {
-  const [value, setValue] = React.useState('');
-  if (dataModal) {
-    const Date = users.filter((item) => {
-      return item.id === dataModal.id;
-    });
-    const Filtered = Object.values(Date[0]).filter(
-      (item) => typeof item === 'string'
-    );
-    console.log(Filtered);
+function Modal({ ref }) {
+  const { openModal, setOpenModal } = React.useContext(UserContext);
 
-    return (
-      <ModalBg>
-        <ModalContent>
-          <CLose>x</CLose>
-          <Title>Editing User</Title>
-          {Filtered.map((item, id) => {
-            return (
-              <Input
-                type='text'
-                name={'name' + id}
-                label='Name'
-                value={value}
-                onChange={({ target }) => setValue(target.value)}
-              />
-            );
-          })}
-          <Button>Save</Button>
-        </ModalContent>
-      </ModalBg>
-    );
-  }
-  return null;
+  const [emailValue, setEmailValue] = React.useState('');
+  const [nameValue, setNameValue] = React.useState('');
+  const [UnitValue, setUnitValue] = React.useState('');
+
+  return (
+    <ModalBg ref={ref}>
+      <ModalContent>
+        <CLose onClick={() => setOpenModal(false)}>x</CLose>
+        <Title>Editing User</Title>
+        <Input
+          type='text'
+          name='name'
+          label='Name'
+          value={nameValue}
+          onChange={({ target }) => setNameValue(target.value)}
+        />
+        <Input
+          type='text'
+          name='email'
+          label='Email'
+          value={emailValue}
+          onChange={({ target }) => setEmailValue(target.value)}
+        />
+        <Input
+          type='text'
+          name='unit'
+          label='Unit'
+          value={UnitValue}
+          onChange={({ target }) => setUnitValue(target.value)}
+        />
+        <Button>Save</Button>
+      </ModalContent>
+    </ModalBg>
+  );
 }
 
 export default Modal;

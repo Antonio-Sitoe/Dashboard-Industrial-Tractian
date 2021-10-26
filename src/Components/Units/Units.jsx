@@ -1,34 +1,66 @@
 import React from 'react';
 import useFetch from '../../Hooks/useFetch';
-import { GET_UNITS } from '../../Services/Api';
+import { GET_ASSETS, GET_UNITS, GET_USERS } from '../../Services/Api';
 import { Card, SectionUser, Title } from '../Users/style';
 import { Graphs, MainUnits } from './Unistyle';
 import Loading from '../Helper/Loading';
 import { Button } from '../../GlobalStyles/GlobalStyles';
+import UnitGraphs from './UnitGraphs';
+import Modal from '../Modal/Modal';
+import { UserContext } from '../../Context/UserContext';
+import useOutside from '../../Hooks/useOutside';
 
 function Units() {
-  const { data, request, loading, error } = useFetch();
+  const { openModal, setOpenModal } = React.useContext(UserContext);
+  const modal = React.useRef();
+  useOutside(modal, () => setOpenModal(false));
+
+  const { request, loading, error } = useFetch();
+  const [unit, setUnit] = React.useState(null);
+  const [asset, setAssets] = React.useState(null);
+  const [user, setUser] = React.useState(null);
+
   React.useEffect(() => {
+    let isAmounted = true;
     async function getUnit() {
       const { url, options } = GET_UNITS();
-      await request(url, options);
+      const units = await request(url, options);
+      setUnit(units.json);
+
+      const userFunction = GET_USERS();
+      const users = await request(userFunction.url, userFunction.options);
+      setUser(users.json);
+
+      const assetFuntion = GET_ASSETS();
+      const assets = await request(assetFuntion.url, assetFuntion.options);
+      setAssets(assets.json);
     }
-    getUnit();
-  }, []);
+    if (isAmounted) getUnit();
+    return () => (isAmounted = false);
+  }, [request]);
+
+  function GetElementsDateFilter(id, title) {
+    let assetValue = asset.filter(({ unitId }) => unitId === id).length;
+    let userValue = user.filter(({ unitId }) => unitId === id).length;
+    return (
+      <UnitGraphs title={title} assetValue={assetValue} userValue={userValue} />
+    );
+  }
+
   if (error)
     return (
       <div>
         <p>{error}</p>
       </div>
     );
-  if (data)
+  if (unit && user && asset)
     return (
       <SectionUser>
         <MainUnits>
-          {data.map(({ id, name }) => {
+          {unit.map(({ id, name }) => {
             return (
               <Graphs key={id}>
-                <Card> grafico</Card>
+                <Card>{GetElementsDateFilter(id, name)}</Card>
                 <Card>
                   <Title>{name}</Title>
                   <p>
@@ -46,7 +78,8 @@ function Units() {
             );
           })}
         </MainUnits>
-        <Button>Add Unit</Button>
+        <Button onClick={() => setOpenModal(true)}>Add Unit</Button>
+        {openModal && <Modal ref={modal} />}
       </SectionUser>
     );
   return <>{loading ? <Loading /> : null}</>;

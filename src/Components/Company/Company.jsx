@@ -3,8 +3,9 @@ import { Button } from '../../GlobalStyles/GlobalStyles';
 import useFetch from '../../Hooks/useFetch';
 import { GET_ASSET, GET_COMPANY } from '../../Services/Api';
 import Loading from '../Helper/Loading';
+import Image from '../Image/Image';
 import { Card, SectionUser, Title } from '../Users/style';
-import { Img, Main } from './Style';
+import { Main } from './Style';
 
 function Company() {
   const { request, error, loading } = useFetch();
@@ -19,7 +20,9 @@ function Company() {
       setName(company.json);
       setDataPhoto(asset.json);
     }
-    GetCompany();
+    let isAmounted = true;
+    if (isAmounted) GetCompany();
+    return () => (isAmounted = false);
   }, []);
 
   if (error)
@@ -32,18 +35,22 @@ function Company() {
     return (
       <SectionUser>
         <Main>
-          <Img src={dataPhoto.image} alt='Imagem de backgroun' />
-
+          <Image
+            src={dataPhoto.image}
+            alt='Imagem de backgroun'
+            height='25rem'
+            minHeight='15rem'
+          />
           <Card>
             <Title>{name.name}</Title>
             <h4>About</h4>
             <p>
-              A Tractian conhecida pelo monitoramento de máquinas com sua
-              própria tecnlogia tem crescido a cada ano. Hoje nós temos 1
-              empresa e possuímos em nossas dependências 2 unidades que se
-              destacam das mais diversas formas. Possuímos exatos 10 ativos e 6
-              usuários ativos no momento. Os planos para o futuro é apresentar
-              uma estratégia mais agressiva para o crescimento da empresa.
+              A {name.name} pelo monitoramento de máquinas com sua própria
+              tecnlogia tem crescido a cada ano. Hoje nós temos 1 empresa e
+              possuímos em nossas dependências 2 unidades que se destacam das
+              mais diversas formas. Possuímos exatos 10 ativos e 6 usuários
+              ativos no momento. Os planos para o futuro é apresentar uma
+              estratégia mais agressiva para o crescimento da empresa.
             </p>
 
             <h4>Location</h4>

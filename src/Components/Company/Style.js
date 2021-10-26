@@ -13,4 +13,8 @@ export const Main = styled.main`
 export const Img = styled.img`
   height: 25rem;
   border-radius: 0.3rem;
+
+  @media(max-width:400px){
+    height: 15rem;
+  }
 `;
