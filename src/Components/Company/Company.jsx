@@ -1,4 +1,5 @@
 import React from 'react';
+import Error from '../Helper/Error'
 import { Button } from '../../GlobalStyles/GlobalStyles';
 import useFetch from '../../Hooks/useFetch';
 import { GET_ASSET, GET_COMPANY } from '../../Services/Api';
@@ -25,12 +26,7 @@ function Company() {
     return () => (isAmounted = false);
   }, []);
 
-  if (error)
-    return (
-      <div>
-        <p>{error}</p>
-      </div>
-    );
+  if (error) return <Error error={error} />;
   if (name && dataPhoto)
     return (
       <SectionUser>

@@ -10,6 +10,7 @@ import { Content } from './Style';
 import useMedia from '../../Hooks/useMedia';
 import Header from '../Header/Header';
 import AssetsDefaults from '../Assets/AssetsDefaults';
+import Page404 from '../Page404/Page404';
 
 function Dashboard() {
   const mobile = useMedia('(max-width:800px)');
@@ -33,6 +34,7 @@ function Dashboard() {
           <Route path='users' element={<Users />} />
           <Route path='units' element={<Units />} />
           <Route path='company' element={<Company />} />
+          <Route path='*' element={<Page404 />} />
         </Routes>
       </Content>
     </Container>

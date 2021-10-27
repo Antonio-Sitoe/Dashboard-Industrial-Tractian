@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import {
   backgroundColor,
-  colorWhite,
   colorWhiteHover,
   dashbordbgColor,
 } from './Utilits';
@@ -41,18 +40,7 @@ h2 {
 p {
   font-size: 0.87rem;
   color: ${colorWhiteHover};
-}
-
-svg {
-    path {
-    fill: ${colorWhite};
-
-    &:hover {
-      fill: ${colorWhiteHover};
-    }
-  }
-}
-`;
+}`;
 
 export const Container = styled.div`
   width: 100%;

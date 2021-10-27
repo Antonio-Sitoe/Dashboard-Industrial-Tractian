@@ -7,11 +7,11 @@ import {
 
 export const SectionUser = styled.section`
   animation: ${AnimeLeft} 0.3s;
-  margin-top: 1rem;
+  margin: 1rem 0;
 `;
 
 export const Card = styled.div`
-  max-width: 55rem;
+  max-width: 100% ;
   margin: auto;
   margin-top: 1rem;
   padding: 1rem;

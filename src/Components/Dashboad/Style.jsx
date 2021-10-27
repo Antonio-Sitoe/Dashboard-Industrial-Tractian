@@ -17,17 +17,31 @@ export const Painel = styled.section`
     transition: 0.6s;
     z-index: 100;
   }
+
+  svg {
+    path {
+      fill: ${colorWhite};
+
+      &:hover {
+        fill: ${colorWhiteHover};
+      }
+    }
+  }
 `;
 export const Dash = styled.div`
   position: fixed;
   top: 4rem;
   height: 80%;
-  left: 1.5rem;
+  left: 2.5rem;
   background: ${dashbordbgColor};
   border-radius: 0.3rem;
   width: 14rem;
   padding: 1rem;
   animation: ${AnimeLeft} 0.3s;
+
+  @media (max-width: 300px) {
+    left: 1.5rem;
+  }
 `;
 
 export const LogoDiv = styled.div`

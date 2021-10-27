@@ -4,7 +4,7 @@ import Highcharts from 'highcharts';
 import { bgCard } from '../../GlobalStyles/Utilits';
 import styled from 'styled-components';
 
-const Main = styled.main`
+export const Main = styled.main`
   max-width: 300px;
   margin: 0 auto;
 `;

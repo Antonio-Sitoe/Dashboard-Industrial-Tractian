@@ -1,4 +1,5 @@
 import React from 'react';
+import Error from '../Helper/Error';
 import { SectionUser } from '../Users/style';
 import useFetch from '../../Hooks/useFetch';
 import { Links } from '../../GlobalStyles/GlobalStyles';
@@ -45,12 +46,7 @@ function Assets() {
     return () => (isAmounted = false);
   }, []);
 
-  if (error)
-    return (
-      <div>
-        <p>{error}</p>
-      </div>
-    );
+  if (error) return <Error error={error} />;
   if (data)
     return (
       <SectionUser>

@@ -70,6 +70,18 @@ export function GET_UNITS() {
     },
   };
 }
+export function POST_UNIT(body) {
+  return {
+    url: `${URL_BASE}/units`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
 
 //COMPANY
 export function GET_COMPANY() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
 import Assets from './Assets';
-import SingleAssets from './SingleAssets';
+import SingleAssets from './SingleAssets/SingleAssets';
 
 function AssetsDefaults() {
   return (

@@ -3,12 +3,12 @@ import { Button } from '../../GlobalStyles/GlobalStyles';
 
 import useFetch from '../../Hooks/useFetch';
 import { GET_UNIT, GET_USERS } from '../../Services/Api';
+import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
-import Modal from '../Modal/Modal';
 import { Card, Table, Theader, Title, Tbody, SectionUser } from './style';
 
 function Users() {
-  const { error, request, loading } = useFetch();
+  const { error, request } = useFetch();
   const [users, setUsers] = React.useState(null);
 
   React.useEffect(() => {
@@ -35,12 +35,7 @@ function Users() {
     return () => (isAmounted = false);
   }, []);
 
-  if (error)
-    return (
-      <div>
-        <p>{error}</p>
-      </div>
-    );
+  if (error) return <Error error={error} />;
   return (
     <>
       {users ? (

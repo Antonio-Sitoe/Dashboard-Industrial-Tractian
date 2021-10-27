@@ -33,7 +33,7 @@ const Wraper = styled.div`
   }
 `;
 
-function Input({ name, type, label, value, onChange }, key) {
+function Input({ name, type, label, value, onChange, placeholder }, key) {
   return (
     <Wraper key={key}>
       <label htmlFor={name}>{label}</label>
@@ -43,6 +43,7 @@ function Input({ name, type, label, value, onChange }, key) {
         id={name}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
       />
     </Wraper>
   );

@@ -19,5 +19,22 @@ export const MainUnits = styled.main`
   }
 `;
 
-export const Graphs = styled.div`
+export const Graphs = styled.div``;
+
+export const TextArea = styled.textarea`
+  border: 1px solid #e4e3e3;
+  background: #f5f5f5;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+
+  &:disabled {
+    background: grey;
+  }
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border: 1px solid gray;
+  }
 `;
