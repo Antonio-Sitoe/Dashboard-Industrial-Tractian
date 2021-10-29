@@ -4,13 +4,16 @@ import { Container } from '../../GlobalStyles/GlobalStyles';
 import Panel from './Panel';
 import Home from '../Home/Home';
 import Users from '../Users/Users';
-import Company from '../Company/Company';
+
 import Units from '../Units/Units';
 import { Content } from './Style';
 import useMedia from '../../Hooks/useMedia';
 import Header from '../Header/Header';
 import AssetsDefaults from '../Assets/AssetsDefaults';
 import Page404 from '../Page404/Page404';
+import ComponyDefault from '../Company/ComponyDefault';
+import Company from '../Company/Company';
+import ComponyEdit from '../Company/ComponyEdit';
 
 function Dashboard() {
   const mobile = useMedia('(max-width:800px)');
@@ -33,7 +36,11 @@ function Dashboard() {
           <Route path='assets/*' element={<AssetsDefaults />} />
           <Route path='users' element={<Users />} />
           <Route path='units' element={<Units />} />
-          <Route path='company' element={<Company />} />
+          <Route path='company/*' element={<ComponyDefault />}>
+            <Route path='' element={<Company />} />
+            <Route path='edit' element={<ComponyEdit />} />
+            <Route path='*' element={<Page404 />} />
+          </Route>
           <Route path='*' element={<Page404 />} />
         </Routes>
       </Content>

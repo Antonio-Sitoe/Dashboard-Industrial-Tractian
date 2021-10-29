@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { backgroundColor } from '../../GlobalStyles/Utilits';
 
 const Wraper = styled.div`
   margin-bottom: 0.5rem;
@@ -33,7 +32,17 @@ const Wraper = styled.div`
   }
 `;
 
-function Input({ name, type, label, value, onChange, placeholder }, key) {
+const Error = styled.p`
+  color: tomato;
+  margin: 0;
+  padding: 0;
+  margin-top: .3rem;
+`;
+
+function Input(
+  { name, type, label, value, onChange, placeholder, error },
+  key
+) {
   return (
     <Wraper key={key}>
       <label htmlFor={name}>{label}</label>
@@ -45,6 +54,7 @@ function Input({ name, type, label, value, onChange, placeholder }, key) {
         onChange={onChange}
         placeholder={placeholder}
       />
+      {error && <Error>{error}</Error>}
     </Wraper>
   );
 }

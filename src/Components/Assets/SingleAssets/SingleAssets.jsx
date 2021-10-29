@@ -1,35 +1,25 @@
 import React from 'react';
 import { SectionUser } from '../../Users/style';
-import Responsess from '../../../Images/Responsess'
-import {
-  AssetGraph,
-  AssetRespo,
-  AssetStatus,
-  AssetConf,
-  GeneralInfo,
-  HealthInfo,
-  InfoAside,
-} from './SingleStyle';
 
-import { MineCard } from '../../Home/HomeStyle';
-import { Links } from '../../../GlobalStyles/GlobalStyles';
+import { GeneralInfo, HealthInfo } from './SingleStyle';
+
+import InfoAsideComponent from './InfoAsideComponent';
+import AssetStatusComponent from './AssetStatusComponent';
+import AssetConfComponent from './AssetConfComponent';
+import AssetUptimeComponent from './AssetUptimeComponent';
+import AssetRespoComponent from './AssetRespoComponent';
+import AssetGraphComponent from './AssetGraphComponent';
 function SingleAssets() {
   return (
     <SectionUser>
       <GeneralInfo>
-        <InfoAside></InfoAside>
+        <InfoAsideComponent />
         <HealthInfo>
-          <AssetGraph></AssetGraph>
-          <AssetStatus></AssetStatus>
-          <AssetConf></AssetConf>
-          <AssetRespo>
-            <MineCard>
-              <div>
-                <Responsess/>
-              </div>
-              <Links to=''>Add user</Links>
-            </MineCard>
-          </AssetRespo>
+          <AssetGraphComponent />
+          <AssetStatusComponent />
+          <AssetConfComponent />
+          <AssetUptimeComponent />
+          <AssetRespoComponent />
         </HealthInfo>
       </GeneralInfo>
     </SectionUser>

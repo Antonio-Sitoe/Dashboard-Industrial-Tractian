@@ -50,7 +50,6 @@ export const Sets = styled.div`
 
 export const MineCard = styled.div`
   text-align: center;
-  padding: 1rem;
   background: ${bgCard};
   border-radius: 0.3rem;
   height: 22rem;
@@ -60,7 +59,6 @@ export const MineCard = styled.div`
   div {
     width: 100%;
     background: #364150;
-    padding: 2rem 0;
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
@@ -73,7 +71,7 @@ export const MineCard = styled.div`
   }
 
   button {
-    width: 100%;
+    margin: 0.6rem;
   }
 `;
 export const FooterHome = styled.footer`

@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
     <UserStorage>
       <Routes>
-        <Route path='/' element={<Login/>} />
+        <Route path='/*' element={<Login/>} />
         <Route path='dashboard/*' element={<Dashboard />} />
         <Route path='*' element={<Page404 />} />
       </Routes>

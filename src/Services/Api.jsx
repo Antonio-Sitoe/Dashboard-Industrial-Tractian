@@ -92,3 +92,27 @@ export function GET_COMPANY() {
     },
   };
 }
+export function PUT_COMPANY(body) {
+  return {
+    url: `${URL_BASE}/companies/1`,
+    options: {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+export function POST_COMPANY(body) {
+  return {
+    url: `${URL_BASE}/companies`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
