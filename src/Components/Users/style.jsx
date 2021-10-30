@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { AnimeLeft } from '../../GlobalStyles/GlobalStyles';
 import {
+  backgroundColor,
   bgCard,
   colorWhite,
+  dashbordbgColor,
 } from '../../GlobalStyles/Utilits';
 
 export const SectionUser = styled.section`
@@ -11,7 +13,7 @@ export const SectionUser = styled.section`
 `;
 
 export const Card = styled.div`
-  max-width: 100% ;
+  max-width: 100%;
   margin: auto;
   margin-top: 1rem;
   padding: 1rem;
@@ -53,6 +55,16 @@ export const Tbody = styled.tbody`
     border-bottom: 1px solid ${colorWhite};
     padding: 1rem 0;
     text-align: center;
+
+    &:last-child {
+      a {
+        background: ${backgroundColor};
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        color: white;
+      }
+    }
   }
 `;
 
@@ -64,5 +76,47 @@ export const Title = styled.h2`
     width: 1rem;
     height: 2px;
     background: currentColor;
+  }
+`;
+
+export const UserEditMain = styled.main`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 0.3rem;
+  background: ${bgCard};
+  color: white;
+
+  form {
+    display: grid;
+    gap: 1rem;
+    color: white;
+
+    input {
+      color: white;
+      background: ${backgroundColor};
+
+      &:hover,
+      &:focus {
+        outline: none;
+        border: 1px solid ${dashbordbgColor};
+      }
+    }
+
+    select {
+      color: white;
+      padding: 0.6rem;
+      border-radius: 0.3rem;
+      background: ${backgroundColor};
+
+      option {
+        padding: 0.6rem;
+      }
+      &:hover,
+      &:focus {
+        outline: none;
+        border: 1px solid ${dashbordbgColor};
+      }
+    }
   }
 `;

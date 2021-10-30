@@ -48,7 +48,7 @@ export const Sets = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 `;
 
-export const MineCard = styled.div`
+export const MineCard = styled.main`
   text-align: center;
   background: ${bgCard};
   border-radius: 0.3rem;

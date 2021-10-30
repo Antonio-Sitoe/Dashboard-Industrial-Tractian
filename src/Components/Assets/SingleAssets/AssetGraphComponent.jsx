@@ -2,33 +2,29 @@ import React from 'react';
 import { AssetGraph } from './SingleStyle';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import { bgCard } from '../../../GlobalStyles/Utilits';
 
-function AssetGraphComponent() {
+function AssetGraphComponent({ data }) {
   const options = {
     chart: {
       type: 'spline',
+      backgroundColor: bgCard,
+      borderRadius: 10,
     },
     title: {
       text: 'Monthly Average Temperature',
+      style: {
+        color: 'white',
+      },
     },
     subtitle: {
-      text: 'Source: WorldClimate.com',
+      text: 'Temperature',
+      style: {
+        color: 'white',
+      },
     },
     xAxis: {
-      categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
-      ],
+      categories: ['Oct'],
     },
     yAxis: {
       title: {
@@ -65,45 +61,12 @@ function AssetGraphComponent() {
           9.5,
           14.5,
           18.2,
-          21.5,
           25.2,
-          {
-            y: 26.5,
-            marker: {
-              symbol:
-                'url(https://www.highcharts.com/samples/graphics/sun.png)',
-            },
-          },
           23.3,
           18.3,
+          data.specifications.maxTemp,
           13.9,
           9.6,
-        ],
-      },
-      {
-        name: 'London',
-        marker: {
-          symbol: 'diamond',
-        },
-        data: [
-          {
-            y: 3.9,
-            marker: {
-              symbol:
-                'url(https://www.highcharts.com/samples/graphics/snow.png)',
-            },
-          },
-          4.2,
-          5.7,
-          8.5,
-          11.9,
-          15.2,
-          17.0,
-          16.6,
-          14.2,
-          10.3,
-          6.6,
-          4.8,
         ],
       },
     ],

@@ -3,8 +3,6 @@ import { Route, Routes } from 'react-router';
 import { Container } from '../../GlobalStyles/GlobalStyles';
 import Panel from './Panel';
 import Home from '../Home/Home';
-import Users from '../Users/Users';
-
 import Units from '../Units/Units';
 import { Content } from './Style';
 import useMedia from '../../Hooks/useMedia';
@@ -14,6 +12,11 @@ import Page404 from '../Page404/Page404';
 import ComponyDefault from '../Company/ComponyDefault';
 import Company from '../Company/Company';
 import ComponyEdit from '../Company/ComponyEdit';
+import User from '../Users/User';
+import HomeDefault from '../Home/HomeDefault';
+import HomeAddUser from '../Home/Add/HomeAddUser';
+import HomeAddUnit from '../Home/Add/HomeAddUnit';
+import HomeAddAssets from '../Home/Add/HomeAddAssets';
 
 function Dashboard() {
   const mobile = useMedia('(max-width:800px)');
@@ -32,9 +35,14 @@ function Dashboard() {
       <Content>
         <Header ShowPanel={ShowPanel} setShowPanel={setShowPanel} />
         <Routes>
-          <Route path='' element={<Home />} />
+          <Route path='' element={<HomeDefault />}>
+            <Route path='' element={<Home />} />
+            <Route path='Adduser' element={<HomeAddUser />} />
+            <Route path='Addunit' element={<HomeAddUnit />} />
+            <Route path='Addassets' element={<HomeAddAssets />} />
+          </Route>
           <Route path='assets/*' element={<AssetsDefaults />} />
-          <Route path='users' element={<Users />} />
+          <Route path='users/*' element={<User />} />
           <Route path='units' element={<Units />} />
           <Route path='company/*' element={<ComponyDefault />}>
             <Route path='' element={<Company />} />

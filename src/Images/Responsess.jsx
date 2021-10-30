@@ -114,9 +114,9 @@ function Responsess() {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(18.7175 27.0511) scale(8.59836 8.59622)'
         >
-          <stop stop-color='#E3E3E3' />
-          <stop offset='0.3513' stop-color='#E9E9E9' />
-          <stop offset='1' stop-color='#EFEFEF' />
+          <stop stopColor='#E3E3E3' />
+          <stop offset='0.3513' stopColor='#E9E9E9' />
+          <stop offset='1' stopColor='#EFEFEF' />
         </radialGradient>
       </defs>
     </svg>

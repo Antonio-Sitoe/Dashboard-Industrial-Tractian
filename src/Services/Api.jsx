@@ -31,6 +31,18 @@ export function POST_USERS(body) {
     },
   };
 }
+export function PUT_USER(body, id) {
+  return {
+    url: `${URL_BASE}/users/${id}`,
+    options: {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
 
 //ASSETS
 export function GET_ASSETS() {
@@ -49,6 +61,26 @@ export function GET_ASSET() {
     },
   };
 }
+export function GET_ASSETID(id) {
+  return {
+    url: `${URL_BASE}/assets/${id}`,
+    options: {
+      method: 'GET',
+    },
+  };
+}
+export function POST_ASSETS(body) {
+  return {
+    url: `${URL_BASE}/assets`,
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
 
 //UNIT
 export function GET_UNIT(id) {
@@ -60,6 +92,14 @@ export function GET_UNIT(id) {
   };
 
   return fetch(dados.url, dados.options);
+}
+export function GET_UNITID(id) {
+  return {
+    url: `${URL_BASE}/units/${id}`,
+    options: {
+      method: 'GET',
+    },
+  };
 }
 
 export function GET_UNITS() {

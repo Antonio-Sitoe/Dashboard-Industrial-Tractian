@@ -213,9 +213,9 @@ function Person() {
           gradientUnits='userSpaceOnUse'
           gradientTransform='translate(16.9736 27.2134) scale(9.59041 9.58812)'
         >
-          <stop stop-color='#E3E3E3' />
-          <stop offset='0.3513' stop-color='#E9E9E9' />
-          <stop offset='1' stop-color='#EFEFEF' />
+          <stop stopColor='#E3E3E3' />
+          <stop offset='0.3513' stopColor='#E9E9E9' />
+          <stop offset='1' stopColor='#EFEFEF' />
         </radialGradient>
         <linearGradient
           id='paint1_linear_1:29823'
@@ -225,9 +225,9 @@ function Person() {
           y2='65.8509'
           gradientUnits='userSpaceOnUse'
         >
-          <stop stop-color='#C5C0B6' />
-          <stop offset='0.559' stop-color='#D3CEC6' />
-          <stop offset='1' stop-color='#D8D3CC' />
+          <stop stopColor='#C5C0B6' />
+          <stop offset='0.559' stopColor='#D3CEC6' />
+          <stop offset='1' stopColor='#D8D3CC' />
         </linearGradient>
       </defs>
     </svg>

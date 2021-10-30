@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '../../GlobalStyles/GlobalStyles';
-
+import { Link } from 'react-router-dom';
 import useFetch from '../../Hooks/useFetch';
 import { GET_UNIT, GET_USERS } from '../../Services/Api';
 import Error from '../Helper/Error';
@@ -48,6 +47,7 @@ function Users() {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Units</th>
+                  <th>Actions</th>
                 </tr>
               </Theader>
               <Tbody>
@@ -57,13 +57,15 @@ function Users() {
                       <td>{name}</td>
                       <td>{email}</td>
                       <td>{unitId}</td>
+                      <td>
+                        <Link to={`edit/${id}`}>* * *</Link>
+                      </td>
                     </tr>
                   );
                 })}
               </Tbody>
             </Table>
           </Card>
-          <Button onClick={() => setOpenModal(true)}>Add User</Button>
         </SectionUser>
       ) : (
         <Loading></Loading>

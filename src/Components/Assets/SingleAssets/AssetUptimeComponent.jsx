@@ -2,12 +2,22 @@ import React from 'react';
 import BorlerPlate from './BorlerPlate';
 import { AssetUptime } from './SingleStyle';
 
-function AssetUptimeComponent() {
+function AssetUptimeComponent({ data }) {
+  const date = new Date(data.lastUptimeAt);
   return (
     <AssetUptime>
-      <BorlerPlate titles='Total de coletas' percent='1279' />
-      <BorlerPlate titles='Total de Horas de coletas' percent='1421 horas' />
-      <BorlerPlate titles='Ultima Coleta:' percent='16/02/2021' />
+      <BorlerPlate
+        titles='Total Up time'
+        percent={Number(data.totalUptime).toFixed() + ' hours'}
+      />
+      <BorlerPlate
+        titles='Total Collection Up time'
+        percent={data.totalCollectsUptime}
+      />
+      <BorlerPlate
+        titles='Last Collection'
+        percent={date.toLocaleDateString('en-GB')}
+      />
     </AssetUptime>
   );
 }

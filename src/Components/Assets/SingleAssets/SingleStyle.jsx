@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-import { bgCard, colorWhite } from '../../../GlobalStyles/Utilits';
+import { bgCard, colorGreen, colorWhite } from '../../../GlobalStyles/Utilits';
 
 export const GeneralInfo = styled.main`
   display: grid;
   gap: 1rem;
   width: 100%;
-  grid-template-columns: 20rem 1fr;
-
-  @media (max-width: 1100px) {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
 `;
 
 export const InfoAside = styled.aside`
@@ -19,6 +15,8 @@ export const InfoAside = styled.aside`
   width: 100%;
   text-align: center;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   span {
     position: absolute;
     top: 0;
@@ -30,20 +28,27 @@ export const InfoAside = styled.aside`
 
   img {
     width: 100%;
-    height: 16rem;
+    height: 20rem;
   }
 
   ul {
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     li {
       font-size: 0.9rem;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
+    }
+  }
+  div {
+    padding: 0;
+    margin: 0;
+    button {
+      width: 90%;
     }
   }
 
-  button {
-    width: 90%;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
   }
 `;
 export const HealthInfo = styled.div`
@@ -52,7 +57,7 @@ export const HealthInfo = styled.div`
   grid-template-areas:
     'AssetStatus AssetGraph'
     'AssetConf AssetGraph'
-    'AssetRespo  AssetUptime ';
+    'AssetUptime AssetRespo';
   gap: 1rem;
 
   @media (max-width: 1100px) {
@@ -86,7 +91,7 @@ export const AssetStatus = styled.div`
     position: relative;
     &::after {
       content: '';
-      background: #865959;
+      background: ${(props) => props.color};
       width: 0.6rem;
       height: 0.6rem;
       border-radius: 50%;
@@ -127,15 +132,47 @@ export const AssetConf = styled.div`
 `;
 export const AssetRespo = styled.div`
   grid-area: AssetRespo;
-  background: ${bgCard};
-  border-radius: 0.3rem;
-  div {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  main {
     padding: 0;
     margin: 0;
+    background: ${bgCard};
   }
 
   a {
     margin: 0.6rem;
+  }
+
+  section {
+    border-radius: 0.3rem;
+    background: ${bgCard};
+    padding: 1rem;
+    color: ${colorWhite};
+
+    ul {
+      display: grid;
+      gap: 1rem;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          width: 0.6rem;
+          height: 0.1rem;
+          margin-right: 0.6rem;
+          background: white;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `;
 

@@ -15,26 +15,28 @@ import { GET_ASSETS } from '../../Services/Api';
 import Loading from '../Helper/Loading';
 import Image from '../Image/Image';
 
+export const CleanElements = (element, unit = ' ') => {
+  return element && unit ? `${element} ${unit}` : '--';
+};
+
+export const CleanStatus = (status) => {
+  let color;
+  switch (status) {
+    case 'inAlert':
+      color = '#DB303F';
+      break;
+    case 'inOperation':
+      color = '#45C86D';
+      break;
+    default:
+      color = '#DB8C28';
+      break;
+  }
+  return <Span color={color}>{status}</Span>;
+};
+
 function Assets() {
   const { data, error, request, loading } = useFetch();
-  const CleanElements = (element, unit = ' ') => {
-    return element && unit ? `${element} ${unit}` : '--';
-  };
-  const CleanStatus = (status) => {
-    let color;
-    switch (status) {
-      case 'inAlert':
-        color = '#DB303F';
-        break;
-      case 'inOperation':
-        color = '#45C86D';
-        break;
-      default:
-        color = '#DB8C28';
-        break;
-    }
-    return <Span color={color}>{status}</Span>;
-  };
 
   React.useEffect(() => {
     async function FetchAssets() {

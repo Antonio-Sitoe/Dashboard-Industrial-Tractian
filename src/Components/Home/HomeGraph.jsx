@@ -1,9 +1,21 @@
 import React from 'react';
-
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
+import { TotalAssets } from './HomeStyle';
 
-function HomeGraph() {
+function Verify(element, status) {
+  return element.filter((item) => item.status === status).length;
+}
+
+function HomeGraph({ data }) {
+  const [inAlert, setInAlert] = React.useState(() => Verify(data, 'inAlert'));
+  const [inOperation, setInOperation] = React.useState(() =>
+    Verify(data, 'inOperation')
+  );
+  const [inDownTime, setIndowntime] = React.useState(() =>
+    Verify(data, 'inDowntime')
+  );
+
   const options = {
     chart: {
       height: 300,
@@ -20,7 +32,7 @@ function HomeGraph() {
       {
         type: 'column',
         name: 'InAlert',
-        data: [3],
+        data: [inAlert],
         color: '#DB303F',
         style: {
           color: 'whitesmoke',
@@ -29,13 +41,13 @@ function HomeGraph() {
       {
         type: 'column',
         name: 'inOperation',
-        data: [2],
+        data: [inOperation],
         color: '#DB8C28',
       },
       {
         type: 'column',
         name: 'inDowntime',
-        data: [4],
+        data: [inDownTime],
         color: '#45C86D',
       },
     ],
@@ -51,9 +63,9 @@ function HomeGraph() {
   };
 
   return (
-    <>
+    <TotalAssets>
       <HighchartsReact highcharts={Highcharts} options={options} />
-    </>
+    </TotalAssets>
   );
 }
 

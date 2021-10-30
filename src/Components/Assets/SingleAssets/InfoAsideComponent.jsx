@@ -1,52 +1,44 @@
 import React from 'react';
 import { InfoAside } from './SingleStyle';
-import Fake from '../../../Images/fake.png';
 import { List } from '../AssetsStyle';
 import { Button } from '../../../GlobalStyles/GlobalStyles';
+import Image from '../../Image/Image';
+import { CleanElements, CleanStatus } from '../Assets';
 
-function InfoAsideComponent() {
+function InfoAsideComponent({ data }) {
   return (
     <InfoAside>
-      <span>Motor H13D-1</span>
-      <img src={Fake} alt='d' />
+      <span>{data.name}</span>
+      <Image src={data.image} alt='image perfil' />
       <List>
         <li>
           <strong>Sensors: </strong>
-          heelo
+          {CleanElements(data.sensors[0])}
         </li>
         <li>
           <strong>Temperature: </strong>
-          hello
+          {CleanElements(data.specifications.maxTemp, '%')}
         </li>
         <li>
           <strong>Status: </strong>
-          hello
+          {CleanElements(data.status)}
         </li>
         <li>
           <strong>Healthscore: </strong>
-          hello
+          {CleanElements(data.healthscore, '%')}
         </li>
         <li>
           <strong>Power: </strong>
-          hello hello
+          {CleanElements(data.specifications.power, 'kWh')}
         </li>
         <li>
           <strong>RPM: </strong>
-          hello hello
+          {CleanElements(data.specifications.rpm, 'kWh')}
         </li>
-        <li>
-          <strong>Empresa: </strong>
-          hello hello
-        </li>
-        <li>
-          <strong>Unidade: </strong>
-          hello hello
-        </li>
+        <div>
+          <Button>Editar</Button>
+        </div>
       </List>
-
-      <div>
-        <Button>Editar</Button>
-      </div>
     </InfoAside>
   );
 }

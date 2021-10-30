@@ -5,38 +5,20 @@ import {
   GET_ASSETS,
   GET_UNITS,
   GET_USERS,
-  POST_UNIT,
 } from '../../Services/Api';
 import { Card, SectionUser, Title } from '../Users/style';
 import { Graphs, MainUnits, TextArea } from './Unistyle';
 import Loading from '../Helper/Loading';
 import { Button } from '../../GlobalStyles/GlobalStyles';
 import UnitGraphs from './UnitGraphs';
-import Modal from '../Modal/Modal';
 import { UserContext } from '../../Context/UserContext';
 import Input from '../Forms/Input';
 
 function Units() {
-  const { openModal, setOpenModal } = React.useContext(UserContext);
-  const [load, setLoad] = React.useState(false);
-
-  const [unitValueName, setUnitValueName] = React.useState('');
-  const [textAbout, setTextAbout] = React.useState('');
-
   const { request, loading, error } = useFetch();
   const [unit, setUnit] = React.useState(null);
   const [asset, setAssets] = React.useState(null);
   const [user, setUser] = React.useState(null);
-
-  async function handleChange(e) {
-    e.preventDefault();
-    setLoad(true);
-    const { url, options } = POST_UNIT();
-    const { response } = await request(url, options);
-    if (response.ok) {
-      setOpenModal(false);
-    }
-  }
 
   React.useEffect(() => {
     let isAmounted = true;
@@ -91,32 +73,6 @@ function Units() {
             );
           })}
         </MainUnits>
-        <Button onClick={() => setOpenModal(true)}>Add Unit</Button>
-        {openModal && (
-          <Modal title='Add units' handleChange={handleChange} load={load}>
-            <Input
-              type='text'
-              name='unit'
-              label='Unit name'
-              value={unitValueName}
-              onChange={({ target }) => setUnitValueName(target.value)}
-              placeholder='Unit name'
-              disabled={!load ? false : true}
-            />
-            <div>
-              <TextArea
-                name='about'
-                id='about'
-                disabled={!load ? false : true}
-                cols='30'
-                rows='10'
-                value={textAbout}
-                onChange={({ target }) => setTextAbout(target.value)}
-                placeholder='Write more about the unit'
-              ></TextArea>
-            </div>
-          </Modal>
-        )}
       </SectionUser>
     );
   return <>{loading ? <Loading /> : null}</>;
