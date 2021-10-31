@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "components": "^0.1.0",
+    "express": "^4.17.1",
     "highcharts": "^9.3.0",
     "highcharts-react-official": "^3.1.0",
     "history": "^5.0.1",
