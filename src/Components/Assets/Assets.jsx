@@ -91,7 +91,7 @@ function Assets() {
                       </li>
                     </List>
                     <CenterButton>
-                      <Links to={`${id}`}>Informacao</Links>
+                      <Links to={`${id}`}>Information</Links>
                     </CenterButton>
                   </div>
                 </CardAssets>

@@ -1,4 +1,3 @@
-import react from 'react';
 import React from 'react';
 import useFetch from '../Hooks/useFetch';
 import { GET_ASSETS, GET_USERS } from '../Services/Api';
@@ -10,7 +9,7 @@ export function UserStorage({ children }) {
   const { request, loading, error } = useFetch();
   const [machineName, setMachineName] = React.useState([]);
   const [responsable, setResponsable] = React.useState([]);
-  
+
   React.useEffect(() => {
     async function GetData() {
       const userUrl = GET_USERS();
@@ -31,6 +30,15 @@ export function UserStorage({ children }) {
 
     return () => (amount = false);
   }, []);
-  const value = { data, setData, loading, error, machineName, setMachineName,responsable, setResponsable };
+  const value = {
+    data,
+    setData,
+    loading,
+    error,
+    machineName,
+    setMachineName,
+    responsable,
+    setResponsable,
+  };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }

@@ -3,9 +3,14 @@ import { InfoAside } from './SingleStyle';
 import { List } from '../AssetsStyle';
 import { Button } from '../../../GlobalStyles/GlobalStyles';
 import Image from '../../Image/Image';
-import { CleanElements, CleanStatus } from '../Assets';
+import { CleanElements } from '../Assets';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function InfoAsideComponent({ data }) {
+  function handleclick() {
+    toast.info('you must have permission for this action!');
+  }
   return (
     <InfoAside>
       <span>{data.name}</span>
@@ -36,8 +41,9 @@ function InfoAsideComponent({ data }) {
           {CleanElements(data.specifications.rpm, 'kWh')}
         </li>
         <div>
-          <Button>Editar</Button>
+          <Button onClick={handleclick}>Edit</Button>
         </div>
+        <ToastContainer />
       </List>
     </InfoAside>
   );

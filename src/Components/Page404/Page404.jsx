@@ -29,7 +29,6 @@ function Page404() {
         <div>
           <PageError404 />
           <h2>404 - Not Found</h2>
-
           <Links to='/dashboard'>Back to home</Links>
         </div>
       </Main>

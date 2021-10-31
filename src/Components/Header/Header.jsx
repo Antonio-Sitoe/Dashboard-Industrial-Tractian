@@ -6,6 +6,7 @@ import {
   bgCard,
   colorWhiteHover,
 } from '../../GlobalStyles/Utilits';
+import useMedia from '../../Hooks/useMedia';
 import Search from '../../Images/search';
 import { Title } from '../Users/style';
 
@@ -77,7 +78,7 @@ function Header({ ShowPanel, setShowPanel }) {
   const [activeBtn, setActive] = React.useState(false);
   const [location, setLocation] = React.useState('');
   const { pathname } = useLocation();
-
+  const mobile = useMedia('(max-width:800px)');
 
   React.useEffect(() => {
     switch (pathname) {
@@ -101,7 +102,8 @@ function Header({ ShowPanel, setShowPanel }) {
         setLocation('Home');
         break;
     }
-  }, [pathname]);
+    if (mobile) setShowPanel(true);
+  }, [pathname, mobile]);
 
   function handleToggle() {
     setShowPanel(!ShowPanel);

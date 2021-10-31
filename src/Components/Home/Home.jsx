@@ -13,7 +13,7 @@ import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
 
 function Home() {
-  const { data, setData, loading, error } = React.useContext(UserContext);
+  const { data, error } = React.useContext(UserContext);
 
   if (error) return <Error error={error} />;
   if (data)
@@ -22,7 +22,7 @@ function Home() {
         <HomeContainer>
           <FirstContent>
             <HomeGraph data={data} />
-            <Tables data={data}/>
+            <Tables data={data} />
           </FirstContent>
           <Sets>
             <MiniCards Element={AtivoCard} to='Addassets' text='Add assets' />

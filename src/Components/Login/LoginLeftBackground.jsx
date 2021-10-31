@@ -13,4 +13,4 @@ function LoginLeftBackground() {
   );
 }
 
-export default LoginLeftBackground;
+export default React.memo(LoginLeftBackground);
