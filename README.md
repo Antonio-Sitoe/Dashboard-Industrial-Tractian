@@ -85,6 +85,8 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 <p>.</p>
+<p>.</p>
+<p>.</p>
 
 
 
@@ -93,47 +95,50 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 ![Screenshot from 2021-11-01 09-49-51](https://user-images.githubusercontent.com/72309855/139639237-e7b7fd77-dffe-42c1-bee5-a848b0d7f495.png)
 
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 
-#
-
-#
-
-#
 **Assets** - Na seguinte pagina, podemos encontrar uma visão geral de todos ativos, pode-se ver os itens que considerei mais importante colocar como a saude, a temperatura, e o nome do sensor.Ao clicar em informação, pode se ver mais informações sobre o determinado ativo, gráficos, e possibilidade de adicionar responsáveis pelo determinado ativo
 
 
 ![Screenshot from 2021-11-01 09-50-12](https://user-images.githubusercontent.com/72309855/139639265-b95a681e-e38e-4398-86e0-42f98af2d34c.png)
 
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 
-
-#
-
-#
-
-#
 **Users** - Sendo um dos factores mais importantes, limitei me a colocar os itens mais importantes dos usuários, como nome, email, e unidade, acções como editar o nome, email.
 
 
 ![image](https://user-images.githubusercontent.com/72309855/139639373-1c842a37-068b-409c-a338-6ae20099f1e2.png)
 
 
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 
-#
-
-#
-
-#
 **Company** - Sendo uma plataforma para usuario final pensei em ter sempre uma pagina onde a empresa pode colocar as suas informacoes necessarias. como localizacao, sobre, foto, unidades.
 
 
 ![Screenshot from 2021-11-01 09-50-33](https://user-images.githubusercontent.com/72309855/139639416-dce05cd3-1fdd-43e4-8ef8-347154c26ef9.png)
 
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
 
-#
-
-#
-
-#
 # Bibliotecas e feramentas
 
 **Reactjs** - reactjs é uma biblioteca de javascript que nos ajuda, a trabalhar com componentes reutilizáveis, e criar user interfaces incríveis de forma fácil e performática, capaz de trabalhar e integrar com varias outras bibliotecas.
