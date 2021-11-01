@@ -1,4 +1,8 @@
-# Tractian Dashbord App
+[Tractian](https://user-images.githubusercontent.com/72309855/139638626-ea6e4983-0d3e-494d-8608-b7e8e0301321.png)
+
+# Tractian Dashbord App!
+<a href="https://tractian-pi.vercel.app/">Live Demo</a>
+
 # Tractian
 E uma empresa brasileira que trabalha no ramo de manutenção de maquinas industriais.
 A TRACTIAN foi fundada em 2019 por Igor e Gabriel, que viram a vida inteira seus pais, coordenadores de manutenção, saindo de madrugada para resolver problemas nas fábricas. Ambos desde cedo trabalharam em indústrias, até que criaram a primeira versão do sensor e da plataforma de monitoramento de máquinas que existe hoje.
@@ -102,6 +106,26 @@ Como ferramenta para fontes do projecto usei o Google fonts
 font-family:"Zen Kaku Gothic";
 font-family:"Nunito"
 font-family:"Poppins"
+```
+
+# Para Clonar
+
+Como ferramenta para fontes do projecto usei o Google fonts
+
+```jsx
+git clone https://github.com/Antonio-Sitoe/Tractian.git
+```
+
+# Para instalar os pacotes
+
+```jsx
+npm install
+```
+
+# Para iniciar o servidor
+
+```jsx
+npm run dev
 ```
 
 
