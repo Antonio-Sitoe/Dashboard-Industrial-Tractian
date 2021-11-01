@@ -80,11 +80,10 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 ![Screenshot from 2021-11-01 09-49-38](https://user-images.githubusercontent.com/72309855/139639204-7f5230eb-a5cc-4e9e-a9a0-91222e6d1551.png)
 
-#
-
-#
-
-#
+<p></p>
+<p></p>
+<p></p>
+<p></p>
 **Home** -  Sendo ela a pagina principal, você pode encontrar um resumo do que a plataforma faz, pudemos encontrar um gráfico onde mostra o estado de todos os activos em (inAlert ,inOperation,inDowtime), uma tabela onde mostra os 3 primeiros activos, o estado e os seus responsáveis. 3 rotas para adicionar, activos, usuários e unidades.
 
 
