@@ -10,8 +10,8 @@ function FooterHomeComponents() {
       </div>
       <span>
         <h2>
-          Receba os insights e alarmes via WhatsApp, você tem praticidade para
-          saber o status da sua máquina em tempo real.
+        Receive insights and alarms via WhatsApp, you have the convenience to
+          know or status of your machine in real time.
         </h2>
       </span>
     </FooterHome>
