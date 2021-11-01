@@ -57,3 +57,5 @@ Informações relevantes para o usuário ficar a par do estado dos seus activos
 **Unidades -**   As unidades  devem mostrar activos de cada uma delas e deve mostrar todos activos
 
 **Empresas -** a empresa sera como o super admin.
+
+[Atividades Mens](https://www.notion.so/21f4a291e86f49b79e4f198a71350505)
