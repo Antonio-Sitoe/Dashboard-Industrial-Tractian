@@ -87,9 +87,6 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 <p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
 
 
 
@@ -103,9 +100,6 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 <p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
 
 **Assets** - Na seguinte pagina, podemos encontrar uma visão geral de todos ativos, pode-se ver os itens que considerei mais importante colocar como a saude, a temperatura, e o nome do sensor.Ao clicar em informação, pode se ver mais informações sobre o determinado ativo, gráficos, e possibilidade de adicionar responsáveis pelo determinado ativo
 
@@ -114,9 +108,6 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 ![Screenshot from 2021-11-01 09-50-12](https://user-images.githubusercontent.com/72309855/139639265-b95a681e-e38e-4398-86e0-42f98af2d34c.png)
 
-<p>.</p>
-<p>.</p>
-<p>.</p>
 <p>.</p>
 <p>.</p>
 <p>.</p>
@@ -132,9 +123,6 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 <p>.</p>
-<p>.</p>
-<p>.</p>
-<p>.</p>
 
 **Company** - Sendo uma plataforma para usuario final pensei em ter sempre uma pagina onde a empresa pode colocar as suas informacoes necessarias. como localizacao, sobre, foto, unidades.
 
@@ -143,9 +131,6 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 ![Screenshot from 2021-11-01 09-50-33](https://user-images.githubusercontent.com/72309855/139639416-dce05cd3-1fdd-43e4-8ef8-347154c26ef9.png)
 
-<p>.</p>
-<p>.</p>
-<p>.</p>
 <p>.</p>
 <p>.</p>
 <p>.</p>
