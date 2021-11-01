@@ -79,6 +79,8 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 <p>.</p>
 <p>.</p>
+
+
 ![Screenshot from 2021-11-01 09-49-38](https://user-images.githubusercontent.com/72309855/139639204-7f5230eb-a5cc-4e9e-a9a0-91222e6d1551.png)
 
 
@@ -95,6 +97,7 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 
+
 ![Screenshot from 2021-11-01 09-49-51](https://user-images.githubusercontent.com/72309855/139639237-e7b7fd77-dffe-42c1-bee5-a848b0d7f495.png)
 
 <p>.</p>
@@ -108,6 +111,7 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 
 <p>.</p>
 <p>.</p>
+
 ![Screenshot from 2021-11-01 09-50-12](https://user-images.githubusercontent.com/72309855/139639265-b95a681e-e38e-4398-86e0-42f98af2d34c.png)
 
 <p>.</p>
@@ -121,6 +125,7 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 <p>.</p>
 
+
 ![image](https://user-images.githubusercontent.com/72309855/139639373-1c842a37-068b-409c-a338-6ae20099f1e2.png)
 
 
@@ -132,6 +137,7 @@ Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela pági
 <p>.</p>
 
 **Company** - Sendo uma plataforma para usuario final pensei em ter sempre uma pagina onde a empresa pode colocar as suas informacoes necessarias. como localizacao, sobre, foto, unidades.
+
 <p>.</p>
 <p>.</p>
 
