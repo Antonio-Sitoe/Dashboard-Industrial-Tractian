@@ -86,7 +86,7 @@ Login - a página de login, simples pagina com possibilidade de fazer o login e 
 
 **Styled-components** - Biblioteca css in js, que nos ajuda a trabalhar com css dentro do javascript e automatiza o desenvolvimento de estilização.
 
-[**react-toastify](https://www.npmjs.com/package/react-toastify) -** Biblioteca para apresentação de mensagens de aviso, sucesso, erro e outros.
+**react-toastify** Biblioteca para apresentação de mensagens de aviso, sucesso, erro e outros.
 
 # Imagens
 
@@ -97,6 +97,12 @@ Os ícones e svgs foram extraídas da comunidade do figma.
 # Fontes
 
 Como ferramenta para fontes do projecto usei o Google fonts
+
+```css
+font-family:"Zen Kaku Gothic";
+font-family:"Nunito"
+font-family:"Poppins"
+```
 
 
 
