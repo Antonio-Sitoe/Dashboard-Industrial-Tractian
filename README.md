@@ -1,5 +1,6 @@
 
-![Tractian](https://user-images.githubusercontent.com/72309855/139639140-340b221c-8b6c-4436-aea8-855aef9a5c38.png)
+<div style="text-align:center">![Tractian](https://user-images.githubusercontent.com/72309855/139639140-340b221c-8b6c-4436-aea8-855aef9a5c38.png)
+</div>
 
 # Tractian Dashbord App!
 <a href="https://tractian-pi.vercel.app/">Live Demo</a>
@@ -74,20 +75,34 @@ O design foi feito com a ferramenta para webdesigner figma. conforme podemos obs
 Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela página de login
 
 **Login** - a página de login, simples pagina com possibilidade de fazer o login e criar uma conta empresa.
+
+
 ![Screenshot from 2021-11-01 09-49-38](https://user-images.githubusercontent.com/72309855/139639204-7f5230eb-a5cc-4e9e-a9a0-91222e6d1551.png)
 
 
 **Home** -  Sendo ela a pagina principal, você pode encontrar um resumo do que a plataforma faz, pudemos encontrar um gráfico onde mostra o estado de todos os activos em (inAlert ,inOperation,inDowtime), uma tabela onde mostra os 3 primeiros activos, o estado e os seus responsáveis. 3 rotas para adicionar, activos, usuários e unidades.
+
+
 ![Screenshot from 2021-11-01 09-49-51](https://user-images.githubusercontent.com/72309855/139639237-e7b7fd77-dffe-42c1-bee5-a848b0d7f495.png)
 
 
 **Assets** - Na seguinte pagina, podemos encontrar uma visão geral de todos ativos, pode-se ver os itens que considerei mais importante colocar como a saude, a temperatura, e o nome do sensor.Ao clicar em informação, pode se ver mais informações sobre o determinado ativo, gráficos, e possibilidade de adicionar responsáveis pelo determinado ativo
+
+
 ![Screenshot from 2021-11-01 09-50-12](https://user-images.githubusercontent.com/72309855/139639265-b95a681e-e38e-4398-86e0-42f98af2d34c.png)
 
+
+
 **Users** - Sendo um dos factores mais importantes, limitei me a colocar os itens mais importantes dos usuários, como nome, email, e unidade, acções como editar o nome, email.
+
+
 ![image](https://user-images.githubusercontent.com/72309855/139639373-1c842a37-068b-409c-a338-6ae20099f1e2.png)
 
+
+
 **Company** - Sendo uma plataforma para usuario final pensei em ter sempre uma pagina onde a empresa pode colocar as suas informacoes necessarias. como localizacao, sobre, foto, unidades.
+
+
 ![Screenshot from 2021-11-01 09-50-33](https://user-images.githubusercontent.com/72309855/139639416-dce05cd3-1fdd-43e4-8ef8-347154c26ef9.png)
 
 
