@@ -58,4 +58,46 @@ Informações relevantes para o usuário ficar a par do estado dos seus activos
 
 **Empresas -** a empresa sera como o super admin.
 
-[Atividades Mens](https://www.notion.so/21f4a291e86f49b79e4f198a71350505)
+[Atividades Mensal](https://www.notion.so/21f4a291e86f49b79e4f198a71350505?v=266933f7c7d34de290919005195c2662)
+
+# Design
+
+O design foi feito com a ferramenta para webdesigner figma. conforme podemos observar no link abaixo.
+
+## Funcionalidades do layault frontend
+
+Por esta vamos fazer uma tour pelo projecto e vamos começar primeiro pela página de login
+
+Login - a página de login, simples pagina com possibilidade de fazer o login e criar uma conta empresa.
+
+**Home** -  Sendo ela a pagina principal, você pode encontrar um resumo do que a plataforma faz, pudemos encontrar um gráfico onde mostra o estado de todos os activos em (inAlert ,inOperation,inDowtime), uma tabela onde mostra os 3 primeiros activos, o estado e os seus responsáveis. 3 rotas para adicionar, activos, usuários e unidades.
+
+**Assets** - Na seguinte pagina, podemos encontrar uma visão geral de todos ativos, pode-se ver os itens que considerei mais importante colocar como a saude, a temperatura, e o nome do sensor.Ao clicar em informação, pode se ver mais informações sobre o determinado ativo, gráficos, e possibilidade de adicionar responsáveis pelo determinado ativo
+
+**Users** - Sendo um dos factores mais importantes, limitei me a colocar os itens mais importantes dos usuários, como nome, email, e unidade, acções como editar o nome, email.
+
+**Company** - Sendo uma plataforma para usuario final pensei em ter sempre uma pagina onde a empresa pode colocar as suas informacoes necessarias. como localizacao, sobre, foto, unidades.
+
+# Bibliotecas e feramentas
+
+**Reactjs** - reactjs é uma biblioteca de javascript que nos ajuda, a trabalhar com componentes reutilizáveis, e criar user interfaces incríveis de forma fácil e performática, capaz de trabalhar e integrar com varias outras bibliotecas.
+
+**Highcharts-react** - biblioteca de apresentação de graficos em javascript. com capacidade de customização de graficos, efeitos e atributos javascript, css e html.
+
+**Styled-components** - Biblioteca css in js, que nos ajuda a trabalhar com css dentro do javascript e automatiza o desenvolvimento de estilização.
+
+[**react-toastify](https://www.npmjs.com/package/react-toastify) -** Biblioteca para apresentação de mensagens de aviso, sucesso, erro e outros.
+
+# Imagens
+
+As imagens encontradas no projeto sao retornadas da api, que foi utilizada para consumir.
+Os ícones e svgs foram extraídas da comunidade do figma.
+Ícones da empresa tractian, foram retirados do próprio website da empresa.
+
+# Fontes
+
+Como ferramenta para fontes do projecto usei o Google fonts
+
+
+
+
