@@ -3,7 +3,7 @@
 
 
 # Tractian Dashbord App!
-<h1><a href="https://tractian-pi.vercel.app/">Live Demo</a></h1>
+<h1><a href="https://tractian-mu.vercel.app/">Live Demo</a></h1>
 <p><a href="https://www.figma.com/file/ZWSIHWrVtKpKntvyhT8vxH/Tractian?node-id=0%3A1">LInk do designe no figma</a></p>
 
 # Tractian
